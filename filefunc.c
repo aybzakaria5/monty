@@ -3,7 +3,9 @@
 data_t data = {{NULL, NULL}, NULL, NULL};
 
 /**
- * process_data.line -
+ * process_data - a function to finds and excutes the opcode if existed
+ * @stack: the stack
+ * @lines_count: the number of line
 */
 void process_data(stack_t **stack, unsigned int lines_count)
 {
@@ -45,8 +47,10 @@ void process_data(stack_t **stack, unsigned int lines_count)
 
 
 /**
- * read_file -
-*/
+ * read_file - a fucntion that reads the file and send its
+ *informations to the process_data function
+ *@stack: the stack
+ */
 void read_file(stack_t **stack)
 {
 	size_t bufsize = 0;
@@ -64,7 +68,9 @@ void read_file(stack_t **stack)
 
 
 /**
- * open_file -
+ * open_file - a function that opens a file if exists
+ * @stack: the stack
+ * @filename: the name of the file
 */
 void open_file(stack_t **stack, char *filename)
 {

@@ -1,4 +1,11 @@
 #include "monty.h"
+/**
+ * main - the main funcion entry point
+ * @argc: the argument counter
+ * @argv: the argument value
+ *
+ * Return: always 0
+*/
 
 int main(int argc, char *argv[])
 {

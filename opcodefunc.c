@@ -24,6 +24,8 @@ int alldigit(char *str)
 
 /**
  * push - pushes an element to the stack
+ * @stack: the stack
+ * @line_number: the line number
  *
 */
 void push(stack_t **stack, unsigned int line_number)
@@ -73,6 +75,8 @@ void push(stack_t **stack, unsigned int line_number)
 /**
  * pall - prints all the values on the stack, starting
  * from the top of the stack.
+ * @stack: the stack
+ * @line_number: the line number
 */
 void pall(stack_t **stack, unsigned int line_number)
 {
@@ -90,6 +94,8 @@ void pall(stack_t **stack, unsigned int line_number)
 
 /**
  * pop - removes the top element of the stack
+ * @stack: the stack
+ * @line_number: the line number
 */
 void pop(stack_t **stack, unsigned int line_number)
 {
@@ -98,11 +104,11 @@ void pop(stack_t **stack, unsigned int line_number)
 	printf("I am popping the stack\n");
 }
 
-
-
 /**
  * pint - prints the value at the top of the stack,
  * followed by a new line
+ * @stack: the stack
+ * @line_number: the line number
 */
 void pint(stack_t **stack, unsigned int line_number)
 {
