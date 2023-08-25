@@ -110,7 +110,14 @@ void pop(stack_t **stack, unsigned int line_number)
 */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	(void)stack;
-	(void)line_number;
-	printf("I am pinting the stack\n");
+	if (!(*stack) || !stack)
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
+		free(data.line);
+		free_stackt(*stack);
+		fclose(data.file);
+		exit(EXIT_FAILURE);
+	}
+	else
+		printf("%d\n", ((*stack)->n));
 }
