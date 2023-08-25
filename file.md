@@ -1,5 +1,6 @@
 push 1
-push 4
-push 5
-push
-push 8
+push     2
+
+                
+    push       1024                          
+push  

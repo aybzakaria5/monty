@@ -31,7 +31,6 @@ int alldigit(char *str)
 void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
-	int aldigit = 0;
 
 	new = malloc(sizeof(stack_t));
 	if (!new)
@@ -42,9 +41,8 @@ void push(stack_t **stack, unsigned int line_number)
 		fclose(data.file);
 		exit(EXIT_FAILURE);
 	}
-	if (alldigit(data.args[1]))
-		aldigit = 1;
-	if (data.args[1] && aldigit)
+
+	if (data.args[1] && alldigit(data.args[1]))
 	{
 		new->n = atoi(data.args[1]);
 	}
