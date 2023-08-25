@@ -36,7 +36,7 @@ void process_data(stack_t **stack, unsigned int lines_count)
 	}
 	if (!found)
 	{
-		printf("L%d: unknown instruction %s\n", lines_count, data.args[0]);
+		fprintf(stderr, "L%d: unknown instruction %s\n", lines_count, data.args[0]);
 		fclose(data.file);
 		free(data.line);
 		if (*stack)
@@ -78,7 +78,7 @@ void open_file(stack_t **stack, char *filename)
 
 	if (!(data.file))
 	{
-		printf("Error: Can't open file %s\n", filename);
+		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
 	else
