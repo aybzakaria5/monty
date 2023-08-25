@@ -109,9 +109,17 @@ void pop(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		(*stack)->next->prev = NULL;
-		*stack = (*stack)->next;
-		free(temp);
+		if ((*stack)->next == NULL)
+		{
+			free(temp);
+			*stack = NULL;
+		}
+		else
+		{
+			(*stack)->next->prev = NULL;
+			*stack = (*stack)->next;
+			free(temp);
+		}
 	}
 }
 
