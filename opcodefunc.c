@@ -97,9 +97,22 @@ void pall(stack_t **stack, unsigned int line_number)
 */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	(void)stack;
-	(void)line_number;
-	printf("I am popping the stack\n");
+	stack_t *temp = *stack;
+
+	if (!(*stack) || !stack)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		free(data.line);
+		free_stackt(*stack);
+		fclose(data.file);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		(*stack)->next->prev = NULL;
+		*stack = (*stack)->next;
+		free(temp);
+	}
 }
 
 /**
