@@ -57,3 +57,31 @@ void pstr(stack_t **stack, unsigned int line_number)
 	}
 	printf("\n");
 }
+
+
+/**
+ * rotr - a fucntion that rotates the stack's elemen from top to last
+ *@stack: the stack
+ *@line_number: the line number
+*/
+
+void rotl(stack_t **stack, unsigned int line_number)
+{
+    stack_t *top = *stack;
+    stack_t *last = *stack;
+	(void)line_number;
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		return;
+	}
+
+    while (last->next != NULL) {
+        last = last->next;
+    }
+
+    last->next = top;
+    top->prev = last;
+    *stack = (*stack)->next;
+    (*stack)->prev->next = NULL;
+    (*stack)->prev = NULL;
+}

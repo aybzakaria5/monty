@@ -3,7 +3,7 @@
 
 
 #define _POSIX_C_SOURCE 200809L
-#define SIZE 13
+#define SIZE 14
 #define DELIM "\t\n "
 
 
@@ -89,6 +89,7 @@ void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
 
 
 /* Functions to handle the stack operations */
