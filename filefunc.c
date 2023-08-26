@@ -20,7 +20,8 @@ void process_data(stack_t **stack, unsigned int lines_count)
 		{"add", add},
 		{"sub", sub},
 		{"div", _div},
-		{"mul", mul}
+		{"mul", mul},
+		{"mod", mod}
 	};
 
 	data.args[0] = strtok(data.line, DELIM);
