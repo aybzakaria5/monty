@@ -47,11 +47,11 @@ void sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * div - divides the second top element of the stack by the top element of the stack.
+ * _div - divides the second top element of the stack by the top element of the stack.
  * @stack: the stack
  * @line_number: the number of line
 */
-/* void div(stack_t **stack, unsigned int line_number)
+void _div(stack_t **stack, unsigned int line_number)
 {
 	if (!(*stack) || !stack || !(*stack)->next)
 	{
@@ -69,5 +69,6 @@ void sub(stack_t **stack, unsigned int line_number)
 		fclose(data.file);
 		exit(EXIT_FAILURE);
 	}
-
-} */
+	(*stack)->next->n = (*stack)->next->n / (*stack)->n;
+	pop(stack, line_number);
+}

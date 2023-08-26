@@ -18,7 +18,8 @@ void process_data(stack_t **stack, unsigned int lines_count)
 		{"swap", swap},
 		{"nop", nop},
 		{"add", add},
-		{"sub", sub}
+		{"sub", sub},
+		{"div", _div}
 	};
 
 	data.args[0] = strtok(data.line, DELIM);
