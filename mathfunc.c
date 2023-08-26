@@ -100,6 +100,8 @@ void mul(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n = (*stack)->next->n * (*stack)->n;
 	pop(stack, line_number);
 }
+
+
  /**
   * mod - a fucntion that calculates the mod of a an elemnt to the other
   * @stack: the stack
