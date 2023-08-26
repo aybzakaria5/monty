@@ -22,7 +22,8 @@ void process_data(stack_t **stack, unsigned int lines_count)
 		{"div", _div},
 		{"mul", mul},
 		{"mod", mod},
-		{"pchar", pchar}
+		{"pchar", pchar},
+		{"pstr", pstr}
 	};
 
 	data.args[0] = strtok(data.line, DELIM);
