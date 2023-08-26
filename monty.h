@@ -3,7 +3,7 @@
 
 
 #define _POSIX_C_SOURCE 200809L
-#define SIZE 9
+#define SIZE 10
 #define DELIM "\t\n "
 
 
@@ -85,9 +85,8 @@ void nop(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
 void _div(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
 
-/* void _div(stack_t **stack, unsigned int line_number);
- */
 
 /* Functions to handle the stack operations */
 void free_stackt(stack_t *head);

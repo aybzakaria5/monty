@@ -32,6 +32,12 @@ void add(stack_t **stack, unsigned int line_number)
 }
 
 
+/**
+ * sub - subtracts the top element of the stack from
+ * the second top element of the stack.
+ * @stack: the stack
+ * @line_number: the number of line
+*/
 void sub(stack_t **stack, unsigned int line_number)
 {
 	if (!stack || !(*stack) || !(*stack)->next)
@@ -47,7 +53,8 @@ void sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * _div - divides the second top element of the stack by the top element of the stack.
+ * _div - divides the second top element of the stack by
+ * the top element of the stack.
  * @stack: the stack
  * @line_number: the number of line
 */
@@ -70,5 +77,26 @@ void _div(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	(*stack)->next->n = (*stack)->next->n / (*stack)->n;
+	pop(stack, line_number);
+}
+
+
+/**
+ * mul - multiplies the second top element of the stack with the
+ * top element of the stack
+ * @stack: the stack
+ * @line_number: the number of line
+*/
+void mul(stack_t **stack, unsigned int line_number)
+{
+	if (!(*stack) || !stack || !(*stack)->next)
+	{
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
+		free(data.line);
+		free_stackt(*stack);
+		fclose(data.file);
+		exit(EXIT_FAILURE);
+	}
+	(*stack)->next->n = (*stack)->next->n * (*stack)->n;
 	pop(stack, line_number);
 }
