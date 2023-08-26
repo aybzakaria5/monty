@@ -110,3 +110,28 @@ void rotr(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = last;
 	*stack = last;
 }
+
+/**
+ * stack - sets the format of the data to a stack (LIFO)
+ * @stack: the stack
+ * @line_number: the number of line
+*/
+void _stack(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+	data.mode = "stack";
+}
+
+
+/**
+ * queue - sets the format of the data to a queue (FIFO)
+ * @stack: the stack
+ * @line_number: the number of line
+*/
+void queue(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+	data.mode = "queue";
+}

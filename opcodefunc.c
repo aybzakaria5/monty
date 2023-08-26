@@ -66,6 +66,10 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	new->prev = NULL;
 	*stack = new;
+	if (strcmp(data.mode, "queue") == 0)
+	{
+		rotl(stack, line_number);
+	}
 }
 
 

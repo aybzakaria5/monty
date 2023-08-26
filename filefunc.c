@@ -1,6 +1,6 @@
 #include "monty.h"
 
-data_t data = {{NULL, NULL}, NULL, NULL};
+data_t data = {{NULL, NULL}, NULL, NULL, "stack"};
 
 /**
  * process_data - a function to finds and excutes the opcode if existed
@@ -25,7 +25,9 @@ void process_data(stack_t **stack, unsigned int lines_count)
 		{"pchar", pchar},
 		{"pstr", pstr},
 		{"rotl", rotl},
-		{"rotr", rotr}
+		{"rotr", rotr},
+		{"stack", _stack},
+		{"queue", queue}
 	};
 
 	data.args[0] = strtok(data.line, DELIM);
