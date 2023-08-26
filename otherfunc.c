@@ -85,3 +85,28 @@ void rotl(stack_t **stack, unsigned int line_number)
     (*stack)->prev->next = NULL;
     (*stack)->prev = NULL;
 }
+/**
+ * rotr - a fucntion that rotates the stack and move 
+ * the last element to the top
+ * @stack: the stack
+ * @line_number: the line number
+*/
+
+void rotr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *last = *stack;
+	(void)line_number;
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		return;
+	}
+	while (last->next)
+	{
+		last = last->next;
+	}
+	last->prev->next = NULL;
+	last->prev = NULL;
+	last->next = (*stack);
+	(*stack)->prev = last;
+	*stack = last;
+}
