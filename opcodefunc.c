@@ -142,3 +142,64 @@ void pint(stack_t **stack, unsigned int line_number)
 	else
 		printf("%d\n", ((*stack)->n));
 }
+
+/**
+ * swap - a function that swaps the top tow elemnets
+ * 
+ * 
+*/
+
+/**void swap(stack_t **stack, unsigned int line_number )
+{	
+	int temp;
+	(void)line_number;
+
+	if ((*stack)->n == (*stack)->next->n)
+	{
+		printf("it's equale no need to convert");
+	}
+	temp = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = temp;
+}
+**/
+
+/**
+ * swap - a fucntion that swaps the tow top nodes in the stack
+ * @stack: the stack with its data
+ * @line_number: the line number of the operation
+*/
+void swap(stack_t **stack, unsigned int line_number)
+{
+	stack_t *top1, *top2;
+	if ( !stack || !(*stack) || !(*stack)->next)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		free(data.line);
+		free_stackt(*stack);
+		fclose(data.file);
+		exit(EXIT_FAILURE);	
+	}
+	top1 = *stack;
+	top2 = (*stack)->next;
+
+	top1->prev = top2;
+	top1->next = top2->next;
+	top2->prev = NULL;
+	top2->next = top1;
+	if (*stack == top1)
+	{
+		*stack = top2;
+	}
+}
+
+/**
+ * nop - a function that does nothing
+ * @stack: the stack
+ * @line_number: the line number
+*/
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)line_number;
+	(void)stack;
+}
