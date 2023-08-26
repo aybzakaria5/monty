@@ -3,7 +3,7 @@
 
 
 #define _POSIX_C_SOURCE 200809L
-#define SIZE 6
+#define SIZE 7
 #define DELIM "\t\n "
 
 
@@ -82,7 +82,7 @@ void pint(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 /**void swap_2(stack_t **stack, unsigned int line_number);**/
 void nop(stack_t **stack, unsigned int line_number);
-
+void add(stack_t **stack, unsigned int line_number);
 
 
 /* Functions to handle the stack operations */
