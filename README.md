@@ -43,3 +43,5 @@
 | 17. Add two digits | [1001-add.bf](./1001-add.bf) |
 | 18. Multiplication | [1002-mul.bf](./1002-mul.bf) |
 | 19. Multiplication level up | [1003-mul.bf](./1003-mul.bf) |
+###
+![Screenshot from 2023-08-28 00-42-04](https://github.com/faty0/monty/assets/85744427/7fa31eb5-b9c0-4660-8f28-1e8af91b56b2)
