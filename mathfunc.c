@@ -102,11 +102,11 @@ void mul(stack_t **stack, unsigned int line_number)
 }
 
 
- /**
-  * mod - a fucntion that calculates the mod of a an elemnt to the other
-  * @stack: the stack
-  * @line_number: the number of line
- */
+/**
+ * mod - a fucntion that calculates the mod of a an elemnt to the other
+ * @stack: the stack
+ * @line_number: the number of line
+*/
 void mod(stack_t **stack, unsigned int line_number)
 {
 	if (!stack || !(*stack) || !(*stack)->next)

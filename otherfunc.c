@@ -60,33 +60,36 @@ void pstr(stack_t **stack, unsigned int line_number)
 
 
 /**
- * rotr - a fucntion that rotates the stack's elemen from top to last
+ * rotl - a fucntion that rotates the stack's elemen from top to last
  *@stack: the stack
  *@line_number: the line number
 */
 
 void rotl(stack_t **stack, unsigned int line_number)
 {
-    stack_t *top = *stack;
-    stack_t *last = *stack;
+	stack_t *top = *stack;
+	stack_t *last = *stack;
 	(void)line_number;
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		return;
 	}
 
-    while (last->next != NULL) {
-        last = last->next;
-    }
+	while (last->next != NULL)
+	{
+		last = last->next;
+	}
 
-    last->next = top;
-    top->prev = last;
-    *stack = (*stack)->next;
-    (*stack)->prev->next = NULL;
-    (*stack)->prev = NULL;
+	last->next = top;
+	top->prev = last;
+	*stack = (*stack)->next;
+	(*stack)->prev->next = NULL;
+	(*stack)->prev = NULL;
 }
+
+
 /**
- * rotr - a fucntion that rotates the stack and move 
+ * rotr - a fucntion that rotates the stack and move
  * the last element to the top
  * @stack: the stack
  * @line_number: the line number
@@ -109,29 +112,4 @@ void rotr(stack_t **stack, unsigned int line_number)
 	last->next = (*stack);
 	(*stack)->prev = last;
 	*stack = last;
-}
-
-/**
- * stack - sets the format of the data to a stack (LIFO)
- * @stack: the stack
- * @line_number: the number of line
-*/
-void _stack(stack_t **stack, unsigned int line_number)
-{
-	(void)stack;
-	(void)line_number;
-	data.mode = "stack";
-}
-
-
-/**
- * queue - sets the format of the data to a queue (FIFO)
- * @stack: the stack
- * @line_number: the number of line
-*/
-void queue(stack_t **stack, unsigned int line_number)
-{
-	(void)stack;
-	(void)line_number;
-	data.mode = "queue";
 }

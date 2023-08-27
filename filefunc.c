@@ -10,25 +10,11 @@ data_t data = {{NULL, NULL}, NULL, NULL, "stack"};
 void process_data(stack_t **stack, unsigned int lines_count)
 {
 	int i, found = 0;
-	instruction_t opcodes[SIZE] = {
-		{"push", push},
-		{"pall", pall},
-		{"pop", pop},
-		{"pint", pint},
-		{"swap", swap},
-		{"nop", nop},
-		{"add", add},
-		{"sub", sub},
-		{"div", _div},
-		{"mul", mul},
-		{"mod", mod},
-		{"pchar", pchar},
-		{"pstr", pstr},
-		{"rotl", rotl},
-		{"rotr", rotr},
-		{"stack", _stack},
-		{"queue", queue}
-	};
+	instruction_t opcodes[SIZE] = { {"push", push}, {"pall", pall}, {"pop", pop},
+	 {"pint", pint}, {"swap", swap}, {"nop", nop}, {"add", add}, {"sub", sub},
+	 {"div", _div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
+	 {"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},
+	 {"stack", _stack}, {"queue", queue} };
 
 	data.args[0] = strtok(data.line, DELIM);
 	data.args[1] = strtok(NULL, DELIM);

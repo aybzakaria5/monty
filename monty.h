@@ -20,6 +20,7 @@
  * @args: array of parsed arguments in each line
  * @file: input file
  * @line: buffer for storing a line of the input file
+ * @mode: the mode operating the linked list (LIFO: stack or FIFO: queue)
  *
  * Description: list representing data needed in different functions
  * of the program
@@ -81,7 +82,6 @@ void pall(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
-/**void swap_2(stack_t **stack, unsigned int line_number);**/
 void nop(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
